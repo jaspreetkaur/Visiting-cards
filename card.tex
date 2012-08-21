@@ -9,7 +9,7 @@
 %            distribution are Copyright (c) 1996  Rice University
 % =========================================================================
 \documentclass[11pt]{article}
-\usepackage[dvips]{graphicx}
+\usepackage{graphicx}
 \usepackage{latexsym}
 \usepackage{times}
 \usepackage{color}
@@ -19,70 +19,44 @@
 \setlength{\evensidemargin}{-20mm}
 \setlength{\textheight}{270mm}
 \setlength{\topmargin}{-20mm}
-\newcommand{\clogo}{\includegraphics[scale=0.09]{gne.eps}}
-%\newcommand{\clogo}{}
-%
-% EDIT THE FOLLOWING VARIABLES
-%
-\newcommand{\name}{Dr. Hardeep Singh Rai}
-\newcommand{\designation}{Professor \& Head (Civil Engg.)}
-\newcommand{\institute}{Guru Nank Dev Engineering College,}
-\newcommand{\Iaddress}{Gill Park, Gill Road}
-\newcommand{\city}{Ludhiana}
-\newcommand{\pincode}{141006}
-\newcommand{\email}{hs.RaiAndRai.com}
-\newcommand{\emails}{hsrai@gndec.ac.in}
-\newcommand{\offphone}{0161-2490339}
-\newcommand{\fax}{0161-2502240}
-\newcommand{\mobileno}{98552-25007}
-\newcommand{\resiaddrss}{H.No. 21,GNDEC Campus, Ludhiana}
-%\newcommand{\curlb}{http:$/\!/$www-dsp.rice.edu/}
-\usepackage{eso-pic}
-\newcommand\BackgroundPic{
-\put(0,0){
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=\paperwidth,height=\paperheight,
-keepaspectratio]{cardd.jpeg}%
-\vfill
-}}}
+\input{config.tex}
 \begin{document}
 \setlength{\unitlength}{1mm}
 \begin{picture}(230,200)(0,0)
   \multiput(0,0)(0,70){4}{
     \multiput(0,0)(105,0){2}{
       \begin{picture}(95,60)(0,0)
+	\put(-3,-63){\bground}	
 	%\AddToShipoutPicture{\BackgroundPic}
         %\put(0,52){\line(0,1){3}}
         %\put(-1,51){\line(-1,0){3}}
         %\put(89,52){\line(0,1){3}}
         %\put(90,51){\line(1,0){3}}
-        \put(-3,-10){\line(1,0){83}}	%upper horizontal line
-	%\put(3,48){\line(0,1){83}}
-	\put(80,-62.5){\line(0,1){52.5}}	%right verticle line
-        \put(32,-20){\bf \raggedright{\name}}
-        \put(32,-25){\textsc{\scriptsize \raggedright{\designation}}}
+        \put(-3,-6){\line(1,0){91.8}}	%upper horizontal line
+	\put(88.8,-63){\line(0,1){57}}	%right verticle line
+        \put(34,-16){\bf \color{white}\raggedright{\name}}
+        \put(34,-21){\textsc{\footnotesize \color{white}\raggedright{\designation}}}
         %\put(35,-18){\textsc{\scriptsize\ctitleb}}
         %\put(35,-21){\textsc{\scriptsize\ctitlec}}
-        \put(32,-35){\scriptsize \raggedright{\institute}}
-        \put(32,-39){\scriptsize \raggedright{\Iaddress \city -\pincode}}
+        \put(34,-33){{\footnotesize \bf \institute}}
+        \put(34,-37){{\footnotesize\bf \Iaddress -\pincode}}
         %\put(35,-42){\scriptsize \cadrd}
-        \put(32,-50){\textsc{\scriptsize E-mail:}}
-        \put(44,-50){\scriptsize \email}
-        \put(44,-54){\scriptsize \emails}
+        \put(35,-48){\textsc{\footnotesize \bf Website:}}
+	\put(48,-48){\footnotesize \bf \website}
+	\put(35,-52){\textsc{\footnotesize \bf Email:}}
+        \put(48,-52){\footnotesize \bf\email}
         %\put(35,-54){\textsc{\scriptsize url dsp:}}
         %\put(49,-58){\scriptsize \curlb}
-        \put(1,-38){\clogo}
-        \put(1,-46){\textsc{\scriptsize Off:}}
-        \put(10,-46){\scriptsize \offphone}
-        \put(1,-50){\textsc{\scriptsize Fax:}}
-        \put(10,-50){\scriptsize \fax}
-	\put(1,-54){\textsc{\scriptsize M:}}
-        \put(10,-54){\scriptsize \mobileno}
-	\put(0,-60){\colorbox{black}{\color{white}{Residence:\resiaddrss}}}
-	\put(-3,-62.5){\line(1,0){83}}	%lower horizontal line
-        \put(-3,-62.5){\line(0,1){52.5}}	%left verticle lines
+        \put(5,-32){\clogo}
+        \put(1,-44){\textsc{\footnotesize \bf Off:}}
+        \put(10,-44){\footnotesize \bf\offphone}
+        \put(1,-48){\textsc{\footnotesize\bf Fax:}}
+        \put(10,-48){\footnotesize \bf \fax}
+	\put(1,-52){\textsc{\footnotesize\bf Mob:}}
+        \put(10,-52){\footnotesize \bf \mobileno}
+	\put(1,-61){\color{white}{{\textsc{Residence}}: \resiaddrss}}
+	\put(-3,-63){\line(1,0){91.8}}	%lower horizontal line
+        \put(-3,-63){\line(0,1){57}}	%left verticle lines
 	%\put(3,3){\line(0,1){83}}
         %\put(0,-1){\line(0,-1){3}}
         %\put(-1,0){\line(-1,0){3}}
